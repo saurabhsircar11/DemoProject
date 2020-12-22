@@ -23,8 +23,8 @@ const App: () => React$Node = () => {
       <SafeAreaView style={{flex: 1}}>
         <NavigationContainer>
           <Stack.Navigator initialRouteName="ListScreen">
-            <Stack.Screen name="Locations" component={ListScreen} />
-            <Stack.Screen name="MapScreen" component={MapScreen} />
+            <Stack.Screen name="Vehicles" component={ListScreen} />
+            <Stack.Screen name="Location" component={MapScreen} />
           </Stack.Navigator>
         </NavigationContainer>
       </SafeAreaView>

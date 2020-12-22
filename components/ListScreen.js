@@ -8,7 +8,7 @@ const Item = ({speed, time, navigation, multiGeo, loc}) => (
     style={styles.item}
     android_ripple={{color: '#efefef', borderless: false}}
     onPress={() =>
-      navigation.navigate('MapScreen', {multiGeo, loc, speed, time})
+      navigation.navigate('Location', {multiGeo, loc, speed, time})
     }>
     <ItemContent speed={speed} time={time} />
   </Pressable>
