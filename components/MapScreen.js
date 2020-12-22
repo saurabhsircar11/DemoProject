@@ -35,7 +35,7 @@ export default class MapScreen extends Component {
           />
           <Polyline
             coordinates={coordinates}
-            strokeColor="#008000" // fallback for when `strokeColors` is not supported by the map-provider
+            strokeColor="#008000"
             strokeWidth={6}
           />
         </MapView>
