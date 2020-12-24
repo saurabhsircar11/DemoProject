@@ -1,13 +1,12 @@
 import React, {Component} from 'react';
 import {View, StyleSheet} from 'react-native';
 import MapView, {Polyline, Marker} from 'react-native-maps';
-import ItemContent from './ItemContent';
 
 export default class MapScreen extends Component {
   constructor(props) {
     super(props);
-    const {route} = props;
-    const {multiGeo, loc, speed, time} = route.params;
+
+    const {multiGeo, loc, speed, time} = props;
     const coordinates = multiGeo.map(({geocode: {lat, lng}}) => ({
       latitude: lat,
       longitude: lng,
@@ -21,7 +20,7 @@ export default class MapScreen extends Component {
     this.state = {coordinates, initial, speed, time};
   }
   render() {
-    const {coordinates, initial, speed, time} = this.state;
+    const {coordinates, initial} = this.state;
     return (
       <View style={styles.container}>
         <MapView style={styles.mapContainer} initialRegion={initial}>
@@ -39,9 +38,6 @@ export default class MapScreen extends Component {
             strokeWidth={6}
           />
         </MapView>
-        <View style={styles.itemContainer}>
-          <ItemContent speed={speed} time={time} />
-        </View>
       </View>
     );
   }
@@ -49,6 +45,5 @@ export default class MapScreen extends Component {
 
 const styles = StyleSheet.create({
   container: {flex: 1},
-  mapContainer: {flex: 0.75},
-  itemContainer: {flex: 0.25},
+  mapContainer: {flex: 1},
 });

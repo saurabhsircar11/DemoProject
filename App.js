@@ -24,7 +24,6 @@ const App: () => React$Node = () => {
         <NavigationContainer>
           <Stack.Navigator initialRouteName="ListScreen">
             <Stack.Screen name="Vehicles" component={ListScreen} />
-            <Stack.Screen name="Location" component={MapScreen} />
           </Stack.Navigator>
         </NavigationContainer>
       </SafeAreaView>
