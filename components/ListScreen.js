@@ -40,7 +40,7 @@ export default class ListScreen extends Component {
     const {listViewState} = this.state;
     if (listViewState) {
       Animated.timing(this.state.animatedValue, {
-        toValue: 0.4,
+        toValue: 0.35,
         timing: 100,
         useNativeDriver: false,
         easing: Easing.linear,
